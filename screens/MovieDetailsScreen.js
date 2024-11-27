@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { 
-  View, 
-  Text, 
-  Image, 
-  StyleSheet, 
-  ScrollView, 
-  TouchableOpacity, 
+import {
+  View,
+  Text,
+  Image,
+  StyleSheet,
+  ScrollView,
+  TouchableOpacity,
   ActivityIndicator,
   Dimensions,
   Linking,
 } from 'react-native';
 import axios from 'axios';
 
-const TMDB_API_KEY = "c59086531f209ac2717b0e50f8c6ef59";
+const TMDB_API_KEY = "b7971bb1312f288fe017f07f7b667df3";
 
 const { width } = Dimensions.get("window");
 
@@ -103,7 +103,7 @@ const MovieDetailsScreen = ({ route }) => {
       </View>
 
       {movie.videos && movie.videos.results.length > 0 && (
-        <TouchableOpacity 
+        <TouchableOpacity
           style={styles.trailerButton}
           onPress={() => {
             // Abrir o trailer no YouTube

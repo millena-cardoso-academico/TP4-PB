@@ -17,18 +17,18 @@ import {
 } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 
-const TMDB_API_KEY = "c59086531f209ac2717b0e50f8c6ef59";
+const TMDB_API_KEY = "b7971bb1312f288fe017f07f7b667df3";
 
 const { width } = Dimensions.get("window");
 
 const HomeScreen = () => {
-  const [categories, setCategories] = useState([]); 
-  const [loading, setLoading] = useState(true); 
-  const [error, setError] = useState(null); 
-  const [searchQuery, setSearchQuery] = useState(""); 
-  const [searchResults, setSearchResults] = useState([]); 
-  const [searchLoading, setSearchLoading] = useState(false); 
-  const [searchError, setSearchError] = useState(null); 
+  const [categories, setCategories] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+  const [searchLoading, setSearchLoading] = useState(false);
+  const [searchError, setSearchError] = useState(null);
 
   const navigation = useNavigation();
 
@@ -207,7 +207,7 @@ const HomeScreen = () => {
                   <FlatList
                     data={item.movies}
                     keyExtractor={(movie) => movie.id.toString()}
-                    renderItem={renderSearchItem} 
+                    renderItem={renderSearchItem}
                     horizontal
                     showsHorizontalScrollIndicator={false}
                     contentContainerStyle={styles.searchList}
@@ -290,7 +290,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#ccc",
   },
   movieTitle: {
-    fontSize: 16, 
+    fontSize: 16,
     textAlign: "center",
     color: "#555",
   },
